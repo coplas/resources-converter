@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/granite-file-reader/granite-file-reader.html">
+
+<dom-module id="resources-converter-app">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <h2>Hello [[prop1]]!</h2>
+        <hr>
+        <pre>[[resStr]]</pre>
+        <granite-file-reader accept=".properties" on-file-read="fileRead">
+            <div class="clickHere">Click here to load a properties</div>
+        </granite-file-reader>
+    </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class ResourcesConverterApp extends Polymer.Element {
+            static get is() {
+                return 'resources-converter-app';
+            }
+
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'CoPLaS'
+                    },
+                    srcStr: {
+                        type: String
+                    },
+                    resStr: {
+                        type: String
+                    }
+                };
+            }
+
+            convert() {
+                this.resStr = this.srcStr.split(/[\r\n]+/g).map(function(item) {
+                    var res;
+                    if (item.indexOf("=") > -1) {
+                        var items = item.split("=");
+                        var key = items[0].replace(/\./g, '_').trim();
+                        var value = items[1].trim();
+                        res = "<string name=\""+key+"\">"+value+"</string>";
+                    } else {
+                        res = ""
+                    }
+                    return res;
+                }).join("\n");
+            }
+
+            fileRead(e) {
+//                console.info('fileRead!', e);
+                this.srcStr = e.detail;
+                this.convert();
+            }
+        }
+
+        window.customElements.define(ResourcesConverterApp.is, ResourcesConverterApp);
+    </script>
+</dom-module>

@@ -1,0 +1,13 @@
+{
+  "name": "resources-converter",
+  "description": "String resources converter",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "granite-file-reader": "LostInBrittany/granite-file-reader#^1.2.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}

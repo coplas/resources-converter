@@ -1,0 +1,7 @@
+{
+  "name": "resources-converter",
+  "short_name": "resources-converter",
+  "description": "String resources converter",
+  "start_url": "/",
+  "display": "standalone"
+}
