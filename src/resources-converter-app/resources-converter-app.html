@@ -8,12 +8,12 @@
                 display: block;
             }
         </style>
-        <h2>Hello [[prop1]]!</h2>
-        <hr>
-        <pre>[[resStr]]</pre>
+        <h2>resources-converter</h2>
         <granite-file-reader accept=".properties" on-file-read="fileRead">
             <div class="clickHere">Click here to load a properties</div>
         </granite-file-reader>
+        <hr>
+        <pre>[[resStr]]</pre>
     </template>
 
     <script>
@@ -28,10 +28,6 @@
 
             static get properties() {
                 return {
-                    prop1: {
-                        type: String,
-                        value: 'CoPLaS'
-                    },
                     srcStr: {
                         type: String
                     },
