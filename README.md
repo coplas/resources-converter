@@ -1,6 +1,12 @@
 # \<resources-converter\>
 
-String resources converter
+String resources converter - convert from Java *.properties to androidf strings format.
+Also replaces "." by "_". Loads data using HTML5 , no data is tranferred anywhere, all is done by local javascript. 
+
+The result is just printed on page. So you can copy-paste it to your local strings.xml file.
+
+
+[Running site](https://coplas.github.io/resources-converter/)
 
 ## Install the Polymer-CLI
 
@@ -31,3 +37,6 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+
+
+## Running example
