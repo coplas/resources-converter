@@ -1,7 +1,7 @@
 # \<resources-converter\>
 
-String resources converter - convert from Java *.properties to androidf strings format.
-Also replaces "." by "_". Loads data using HTML5 , no data is tranferred anywhere, all is done by local javascript. 
+String resources converter - convert from Java *.properties to Android strings format.
+Also replaces "." by "_". Loads data using HTML5 , no data is transferred anywhere, all is done by local javascript. 
 
 The result is just printed on page. So you can copy-paste it to your local strings.xml file.
 

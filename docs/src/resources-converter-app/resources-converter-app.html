@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/granite-file-reader/granite-file-reader.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
 <dom-module id="resources-converter-app">
     <template>
@@ -8,9 +9,14 @@
                 display: block;
             }
         </style>
-        <h2>resources-converter</h2>
+        <h1>String resources converter</h1>
+        String resources converter - convert from Java *.properties to Android strings format.
+        Also replaces "." by "_". Loads data using HTML5 , no data is transferred anywhere, all is done by local javascript.
+        <br><br>
+        <a href="https://github.com/coplas/resources-converter/">Github repository</a>
+        <br><br>
         <granite-file-reader accept=".properties" on-file-read="fileRead">
-            <div class="clickHere">Click here to load a properties</div>
+            <paper-button raised="" class="indigo">Load a properties file</paper-button>
         </granite-file-reader>
         <hr>
         <pre>[[resStr]]</pre>
